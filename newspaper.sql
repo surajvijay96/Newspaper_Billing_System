@@ -1,0 +1,160 @@
+-- MySQL dump 10.13  Distrib 5.6.30, for debian-linux-gnu (x86_64)
+--
+-- Host: localhost    Database: newspaper
+-- ------------------------------------------------------
+-- Server version	5.6.30-1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `attendance`
+--
+
+DROP TABLE IF EXISTS `attendance`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `attendance` (
+  `paper` varchar(100) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `day` varchar(20) DEFAULT NULL,
+  `delivery` varchar(5) NOT NULL DEFAULT 'no',
+  UNIQUE KEY `uq_attendance` (`paper`,`date`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `attendance`
+--
+
+LOCK TABLES `attendance` WRITE;
+/*!40000 ALTER TABLE `attendance` DISABLE KEYS */;
+INSERT INTO `attendance` VALUES ('PRAJA VANI',NULL,NULL,''),('VIJAYA KARNATAKA',NULL,NULL,''),('PRAJA VANI',NULL,NULL,''),('VIJAYA KARNATAKA',NULL,NULL,''),('JANA MITHRA','2017-04-01',NULL,'no'),('PRAJA VANI','2017-04-01',NULL,'yes'),('SAMYUKTHA KARNATAKA','2017-04-01',NULL,'no'),('VIJAYA KARNATAKA','2017-04-01',NULL,'yes'),('JANA MITHRA','2017-04-02',NULL,'no'),('PRAJA VANI','2017-04-02',NULL,'yes'),('SAMYUKTHA KARNATAKA','2017-04-02',NULL,'no'),('VIJAYA KARNATAKA','2017-04-02',NULL,'no'),('JANA MITHRA','2017-04-03',NULL,'no'),('PRAJA VANI','2017-04-03',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-03',NULL,'no'),('VIJAYA KARNATAKA','2017-04-03',NULL,'no'),('JANA MITHRA','2017-04-04',NULL,'no'),('PRAJA VANI','2017-04-04',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-04',NULL,'yes'),('VIJAYA KARNATAKA','2017-04-04',NULL,'no'),('JANA MITHRA','2017-04-05',NULL,'no'),('PRAJA VANI','2017-04-05',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-05',NULL,'no'),('VIJAYA KARNATAKA','2017-04-05',NULL,'no'),('JANA MITHRA','2017-04-06',NULL,'no'),('PRAJA VANI','2017-04-06',NULL,'yes'),('SAMYUKTHA KARNATAKA','2017-04-06',NULL,'no'),('VIJAYA KARNATAKA','2017-04-06',NULL,'no'),('JANA MITHRA','2017-04-07',NULL,'no'),('PRAJA VANI','2017-04-07',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-07',NULL,'yes'),('VIJAYA KARNATAKA','2017-04-07',NULL,'no'),('JANA MITHRA','2017-04-08',NULL,'no'),('PRAJA VANI','2017-04-08',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-08',NULL,'no'),('VIJAYA KARNATAKA','2017-04-08',NULL,'no'),('JANA MITHRA','2017-04-09',NULL,'no'),('PRAJA VANI','2017-04-09',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-09',NULL,'no'),('VIJAYA KARNATAKA','2017-04-09',NULL,'no'),('JANA MITHRA','2017-04-10',NULL,'no'),('PRAJA VANI','2017-04-10',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-10',NULL,'no'),('VIJAYA KARNATAKA','2017-04-10',NULL,'no'),('JANA MITHRA','2017-04-11',NULL,'no'),('PRAJA VANI','2017-04-11',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-11',NULL,'no'),('VIJAYA KARNATAKA','2017-04-11',NULL,'no'),('JANA MITHRA','2017-04-12',NULL,'no'),('PRAJA VANI','2017-04-12',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-12',NULL,'no'),('VIJAYA KARNATAKA','2017-04-12',NULL,'no'),('JANA MITHRA','2017-04-13',NULL,'no'),('PRAJA VANI','2017-04-13',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-13',NULL,'no'),('VIJAYA KARNATAKA','2017-04-13',NULL,'no'),('JANA MITHRA','2017-04-14',NULL,'no'),('PRAJA VANI','2017-04-14',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-14',NULL,'no'),('VIJAYA KARNATAKA','2017-04-14',NULL,'no'),('JANA MITHRA','2017-04-15',NULL,'no'),('PRAJA VANI','2017-04-15',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-15',NULL,'no'),('VIJAYA KARNATAKA','2017-04-15',NULL,'no'),('JANA MITHRA','2017-04-16',NULL,'no'),('PRAJA VANI','2017-04-16',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-16',NULL,'no'),('VIJAYA KARNATAKA','2017-04-16',NULL,'no'),('JANA MITHRA','2017-04-17',NULL,'no'),('PRAJA VANI','2017-04-17',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-17',NULL,'no'),('VIJAYA KARNATAKA','2017-04-17',NULL,'no'),('JANA MITHRA','2017-04-18',NULL,'no'),('PRAJA VANI','2017-04-18',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-18',NULL,'no'),('VIJAYA KARNATAKA','2017-04-18',NULL,'no'),('JANA MITHRA','2017-04-19',NULL,'no'),('PRAJA VANI','2017-04-19',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-19',NULL,'no'),('VIJAYA KARNATAKA','2017-04-19',NULL,'no'),('JANA MITHRA','2017-04-20',NULL,'no'),('PRAJA VANI','2017-04-20',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-20',NULL,'no'),('VIJAYA KARNATAKA','2017-04-20',NULL,'no'),('JANA MITHRA','2017-04-21',NULL,'no'),('PRAJA VANI','2017-04-21',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-21',NULL,'no'),('VIJAYA KARNATAKA','2017-04-21',NULL,'no'),('JANA MITHRA','2017-04-22',NULL,'no'),('PRAJA VANI','2017-04-22',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-22',NULL,'no'),('VIJAYA KARNATAKA','2017-04-22',NULL,'no'),('JANA MITHRA','2017-04-23',NULL,'no'),('PRAJA VANI','2017-04-23',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-23',NULL,'no'),('VIJAYA KARNATAKA','2017-04-23',NULL,'no'),('JANA MITHRA','2017-04-24',NULL,'no'),('PRAJA VANI','2017-04-24',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-24',NULL,'no'),('VIJAYA KARNATAKA','2017-04-24',NULL,'no'),('JANA MITHRA','2017-04-25',NULL,'no'),('PRAJA VANI','2017-04-25',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-25',NULL,'no'),('VIJAYA KARNATAKA','2017-04-25',NULL,'no'),('JANA MITHRA','2017-04-26',NULL,'no'),('PRAJA VANI','2017-04-26',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-26',NULL,'no'),('VIJAYA KARNATAKA','2017-04-26',NULL,'no'),('JANA MITHRA','2017-04-27',NULL,'no'),('PRAJA VANI','2017-04-27',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-27',NULL,'no'),('VIJAYA KARNATAKA','2017-04-27',NULL,'no'),('JANA MITHRA','2017-04-28',NULL,'no'),('PRAJA VANI','2017-04-28',NULL,'yes'),('SAMYUKTHA KARNATAKA','2017-04-28',NULL,'no'),('VIJAYA KARNATAKA','2017-04-28',NULL,'no'),('JANA MITHRA','2017-04-29',NULL,'no'),('PRAJA VANI','2017-04-29',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-04-29',NULL,'no'),('VIJAYA KARNATAKA','2017-04-29',NULL,'no'),('JANA MITHRA','2017-04-30',NULL,'no'),('PRAJA VANI','2017-04-30',NULL,'yes'),('SAMYUKTHA KARNATAKA','2017-04-30',NULL,'no'),('VIJAYA KARNATAKA','2017-04-30',NULL,'no'),('JANA MITHRA','2017-05-01',NULL,'yes'),('PRAJA VANI','2017-05-01',NULL,'no'),('SAMYUKTHA KARNATAKA','2017-05-01',NULL,'no'),('VIJAYA KARNATAKA','2017-05-01',NULL,'yes'),('JANA MITHRA','2017-05-02',NULL,'no'),('PRAJA VANI','2017-05-02',NULL,'yes'),('SAMYUKTHA KARNATAKA','2017-05-02',NULL,'no'),('VIJAYA KARNATAKA','2017-05-02',NULL,'no');
+/*!40000 ALTER TABLE `attendance` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `cost`
+--
+
+DROP TABLE IF EXISTS `cost`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `cost` (
+  `slno` int(4) NOT NULL,
+  `paper` varchar(50) NOT NULL,
+  `sunday` int(4) DEFAULT NULL,
+  `monday` int(4) DEFAULT NULL,
+  `tuesday` int(4) DEFAULT NULL,
+  `wednesday` int(4) DEFAULT NULL,
+  `thursday` int(4) DEFAULT NULL,
+  `friday` int(4) DEFAULT NULL,
+  `saturday` int(4) DEFAULT NULL,
+  PRIMARY KEY (`paper`),
+  UNIQUE KEY `slno` (`slno`),
+  UNIQUE KEY `slno_2` (`slno`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cost`
+--
+
+LOCK TABLES `cost` WRITE;
+/*!40000 ALTER TABLE `cost` DISABLE KEYS */;
+INSERT INTO `cost` VALUES (1,'JANA MITHRA',5,2,5,4,4,4,4),(2,'PRAJA VANI',7,2,6,5,5,5,5),(3,'SAMYUKTHA KARNATAKA',7,2,6,5,5,5,5),(4,'VIJAYA KARNATAKA',8,5,5,7,5,5,5);
+/*!40000 ALTER TABLE `cost` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `daysOfWeek`
+--
+
+DROP TABLE IF EXISTS `daysOfWeek`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `daysOfWeek` (
+  `id` int(1) DEFAULT NULL,
+  `day` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `daysOfWeek`
+--
+
+LOCK TABLES `daysOfWeek` WRITE;
+/*!40000 ALTER TABLE `daysOfWeek` DISABLE KEYS */;
+INSERT INTO `daysOfWeek` VALUES (1,'sunday'),(2,'monday'),(3,'tuesday'),(4,'wednesday'),(5,'thursday'),(6,'friday'),(7,'saturday');
+/*!40000 ALTER TABLE `daysOfWeek` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `history`
+--
+
+DROP TABLE IF EXISTS `history`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `history` (
+  `paper` varchar(50) DEFAULT NULL,
+  `date` varchar(15) DEFAULT NULL,
+  `bill` int(8) DEFAULT NULL,
+  UNIQUE KEY `uq` (`paper`,`date`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `history`
+--
+
+LOCK TABLES `history` WRITE;
+/*!40000 ALTER TABLE `history` DISABLE KEYS */;
+INSERT INTO `history` VALUES ('JANA MITHRA','2017-03',0),('PRAJA VANI','2017-03',0),('SAMYUKTHA KARNATAKA','2017-03',0),('VIJAYA KARNATAKA','2017-03',0),('JANA MITHRA','2017-02',0),('PRAJA VANI','2017-02',0),('SAMYUKTHA KARNATAKA','2017-02',0),('VIJAYA KARNATAKA','2017-02',0);
+/*!40000 ALTER TABLE `history` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `login`
+--
+
+DROP TABLE IF EXISTS `login`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `login` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) DEFAULT NULL,
+  `password` varchar(20) DEFAULT NULL,
+  `priv` int(4) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `login`
+--
+
+LOCK TABLES `login` WRITE;
+/*!40000 ALTER TABLE `login` DISABLE KEYS */;
+INSERT INTO `login` VALUES (1,'admin','password',1);
+/*!40000 ALTER TABLE `login` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-05-02 17:02:35

@@ -1,0 +1,9 @@
+<?php
+	include('config.php');
+	session_start();
+	session_unset();
+	//unset($_SESSION['login_user']);
+	//unset($username);
+	session_destroy();
+	header("location:index.php")
+?>
